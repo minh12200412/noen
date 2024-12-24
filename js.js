@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const music = document.getElementById("background-music");
-  music.play().catch(() => {
-    console.log("Trình duyệt yêu cầu tương tác để phát nhạc.");
+function playMusic() {
+  const audio = document.getElementById("audioPlayer");
+  audio.play().catch((error) => {
+    console.log("Không thể phát nhạc do lỗi: ", error);
   });
-});
+}
